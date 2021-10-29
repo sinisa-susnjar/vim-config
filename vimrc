@@ -5,9 +5,32 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+" Let Vundle manage Vundle.
 Plugin 'VundleVim/Vundle.vim'
+" Awesome git plugin.
 Plugin 'tpope/vim-fugitive'
+" Fast fuzzy search. Start with <leader>t
 Plugin 'wincent/command-t.git'
+" Add C++ manual eg from cppreference.com
+Plugin 'skywind3000/vim-cppman'
+" View and search LSP symbols and tags.
+Plugin 'liuchengxu/vista.vim'
+" Add enhanced C++ syntax highlighting.
+Plugin 'octol/vim-cpp-enhanced-highlight'
+" Add git gutter marks.
+Plugin 'airblade/vim-gitgutter'
+" Get nerdtree file and directory plugin.
+Plugin 'scrooloose/nerdtree'
+Plugin 'scrooloose/nerdcommenter'
+" Get devicons for nerdtree and enable additional highlighting.
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Add vim-airline for a nicer status line.
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+" Add FuzzyFinder plugin and L9 dependency.
+Plugin 'vim-scripts/FuzzyFinder'
+Plugin 'L9'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -17,8 +40,68 @@ filetype plugin indent on    " required
 "
 " Put your non-Plugin stuff after this line
 
+" ------------------------------------------------------------------------------
+" Configure shortcuts for vim-fugitive plugin.
+" Default <leader> key is \ and can be easily remapped to eg Space like this:
+" :let mapleader = "\<Space>"
+map <leader>gb :Gblame<CR>
+map <leader>gd :Gdiff<CR>
+map <leader>gs :Gstatus<CR>
+map <leader>gl :Glog<CR>
+noremap <F2> :Gvdiffsplit <CR>
 
+" ------------------------------------------------------------------------------
+" Configure vim-cppman to show help for the word under the cursor when pressing K
+" You will need to install and configure the cppman package for that, eg on Ubuntu:
+" sudo apt-get install cppman
+" cppman --source=cppreference.com
+" cppman --cache-all --force-update (optional, only for working offline)
+function! s:JbzCppMan()
+    let old_isk = &iskeyword
+    setl iskeyword+=:
+    let str = expand("<cword>")
+    let &l:iskeyword = old_isk
+    execute 'Cppman ' . str
+    " execute 'Man ' . str
+endfunction
+command! JbzCppMan :call s:JbzCppMan()
+au FileType cpp nnoremap <buffer>K :JbzCppMan<CR>
 
+" ------------------------------------------------------------------------------
+" Configure vista plugin to open when F12 is pressed.
+noremap <F12> :Vista!! <CR>
+
+" ------------------------------------------------------------------------------
+" Configure nerdtree plugin.
+map <c-l> :tabn<CR>
+map <c-h> :tabp<CR>
+" map <c-n> :tabnew<CR>
+noremap <F1> :NERDTreeToggle <CR>
+noremap <F12> :Vista!! <CR>
+
+" let g:NERDTreeSyntaxDisableDefaultExtensions = 1
+" let g:NERDTreeDisableExactMatchHighlight = 1
+" let g:NERDTreeDisablePatternMatchHighlight = 1
+" let g:NERDTreeSyntaxEnabledExtensions = ['c', 'h', 'cc', 'pl', 'p6', 'sh']
+
+" ------------------------------------------------------------------------------
+" Configure airline statusbar.
+set laststatus=2
+set ttimeoutlen=50
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline_theme='luna'
+"let g:airline_theme='badwolf'
+"let g:airline_theme='dark'
+let g:airline_theme='bubblegum'
+"In order to see the powerline fonts, adapt the font of your terminal
+"In Gnome Terminal: “use custom font” in the profile. I use Monospace regular.
+let g:airline_powerline_fonts = 1
+" let g:airline_theme='solarized'
+" let g:airline_solarized_bg='dark'
+
+" ------------------------------------------------------------------------------
+" Configure key shortcuts for the FuzzyFinder plugin.
+map <leader>ff :FufCoverageFile<CR>
 
 
 " Use all available colours.
