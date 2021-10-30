@@ -31,6 +31,8 @@ Plugin 'vim-airline/vim-airline-themes'
 " Add FuzzyFinder plugin and L9 dependency.
 Plugin 'vim-scripts/FuzzyFinder'
 Plugin 'L9'
+" Add neovim LSP plugin.
+Plugin 'neovim/nvim-lspconfig'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -103,6 +105,13 @@ let g:airline_powerline_fonts = 1
 " Configure key shortcuts for the FuzzyFinder plugin.
 map <leader>ff :FufCoverageFile<CR>
 
+" ------------------------------------------------------------------------------
+" Configure C/C++ LSP server.
+lua require'lspconfig'.clangd.setup{}
+
+" ------------------------------------------------------------------------------
+" Configure D LSP server.
+lua require'lspconfig'.serve_d.setup{}
 
 " Use all available colours.
 :set termguicolors

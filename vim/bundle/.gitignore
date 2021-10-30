@@ -12,3 +12,4 @@ vim-fugitive
 vim-gitgutter
 vim-nerdtree-syntax-highlight
 vista.vim
+nvim-lspconfig
