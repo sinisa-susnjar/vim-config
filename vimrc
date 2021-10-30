@@ -28,11 +28,11 @@ Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 " Add vim-airline for a nicer status line.
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-" Add FuzzyFinder plugin and L9 dependency.
-Plugin 'vim-scripts/FuzzyFinder'
-Plugin 'L9'
 " Add neovim LSP plugin.
 Plugin 'neovim/nvim-lspconfig'
+" Add deoplete auto completion plugin(s)
+Plugin 'shougo/deoplete.nvim'
+Plugin 'deoplete-plugins/deoplete-lsp'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -98,12 +98,10 @@ let g:airline_theme='bubblegum'
 "In order to see the powerline fonts, adapt the font of your terminal
 "In Gnome Terminal: “use custom font” in the profile. I use Monospace regular.
 let g:airline_powerline_fonts = 1
-" let g:airline_theme='solarized'
-" let g:airline_solarized_bg='dark'
 
 " ------------------------------------------------------------------------------
-" Configure key shortcuts for the FuzzyFinder plugin.
-map <leader>ff :FufCoverageFile<CR>
+" Configure deoplete auto completion engine.
+let g:deoplete#enable_at_startup = 1
 
 " ------------------------------------------------------------------------------
 " Configure C/C++ LSP server.
@@ -169,7 +167,6 @@ augroup filetype
 	au! BufNewFile,BufRead *.cql setfiletype cypher
 	au! BufNewFile,BufRead *.mq[h45] setfiletype mql4
 	au! BufNewFile,BufRead *.gcov setfiletype gcov
-	"""au! BufNewFile,BufRead *.d let g:deoplete#enable_at_startup = 1
 augroup END
 
 " Some handy mappings.
@@ -179,3 +176,8 @@ augroup END
 :map - mb:.,'a<<CR>'b
 
 :se ai nu ts=4 sw=4 noeb nows errorfile=c.err "expandtab
+
+" Jump to last position in file on open.
+" From: help: last-position-jump
+autocmd BufRead * autocmd FileType <buffer> ++once
+      \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
