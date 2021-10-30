@@ -102,6 +102,8 @@ let g:airline_powerline_fonts = 1
 " ------------------------------------------------------------------------------
 " Configure deoplete auto completion engine.
 let g:deoplete#enable_at_startup = 1
+let g:deoplete#lsp#handler_enabled = v:true
+let g:deoplete#lsp#use_icons_for_candidates = v:true
 
 " ------------------------------------------------------------------------------
 " Configure C/C++ LSP server.
@@ -176,8 +178,3 @@ augroup END
 :map - mb:.,'a<<CR>'b
 
 :se ai nu ts=4 sw=4 noeb nows errorfile=c.err "expandtab
-
-" Jump to last position in file on open.
-" From: help: last-position-jump
-autocmd BufRead * autocmd FileType <buffer> ++once
-      \ if &ft !~# 'commit\|rebase' && line("'\"") > 1 && line("'\"") <= line("$") | exe 'normal! g`"' | endif
