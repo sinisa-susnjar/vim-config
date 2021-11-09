@@ -155,6 +155,10 @@ let g:Vsd={'extra_highlight':1}
 " Enable syntax highlighting.
 :syntax on
 
+" Nicer LSP error/warning markers
+:highlight LspDiagnosticsDefaultError guifg=red
+:highlight LspDiagnosticsDefaultWarning guifg=orange
+
 " Show list of wildcard matches.
 :set wildmode=list:longest
 
