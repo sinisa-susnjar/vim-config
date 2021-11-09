@@ -2,7 +2,7 @@
 " See https://github.com/VundleVim/Vundle.vim
 set nocompatible              " be iMproved, required
 filetype off                  " required
-" set the runtime path to include Vundle and initialize
+" Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " Let Vundle manage Vundle.
@@ -46,18 +46,18 @@ filetype plugin indent on    " required
 " Configure shortcuts for vim-fugitive plugin.
 " Default <leader> key is \ and can be easily remapped to eg Space like this:
 " :let mapleader = "\<Space>"
-map <leader>gb :Gblame<CR>
+map <leader>gb :Git blame<CR>
 map <leader>gd :Gdiff<CR>
-map <leader>gs :Gstatus<CR>
+map <leader>gs :Git<CR>
 map <leader>gl :Glog<CR>
 noremap <F2> :Gvdiffsplit <CR>
 
 " ------------------------------------------------------------------------------
 " Configure vim-cppman to show help for the word under the cursor when pressing K
 " You will need to install and configure the cppman package for that, eg on Ubuntu:
-" sudo apt-get install cppman
+" sudo apt install cppman
 " cppman --source=cppreference.com
-" cppman --cache-all --force-update (optional, only for working offline)
+" cppman --cache-all --force-update (takes a looong time, only needed when working offline)
 function! s:JbzCppMan()
     let old_isk = &iskeyword
     setl iskeyword+=:
@@ -79,7 +79,6 @@ map <c-l> :tabn<CR>
 map <c-h> :tabp<CR>
 " map <c-n> :tabnew<CR>
 noremap <F1> :NERDTreeToggle <CR>
-noremap <F12> :Vista!! <CR>
 
 " let g:NERDTreeSyntaxDisableDefaultExtensions = 1
 " let g:NERDTreeDisableExactMatchHighlight = 1
@@ -96,7 +95,7 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline_theme='dark'
 let g:airline_theme='bubblegum'
 "In order to see the powerline fonts, adapt the font of your terminal
-"In Gnome Terminal: “use custom font” in the profile. I use Monospace regular.
+"In Gnome Terminal: “use custom font” in the profile. See eg nerdfonts.com
 let g:airline_powerline_fonts = 1
 
 " ------------------------------------------------------------------------------
@@ -155,7 +154,7 @@ let g:Vsd={'extra_highlight':1}
 " Enable syntax highlighting.
 :syntax on
 
-" Nicer LSP error/warning markers
+" Nicer LSP error/warning/hint markers.
 :highlight LspDiagnosticsDefaultError guifg=red
 :highlight LspDiagnosticsDefaultWarning guifg=orange
 :highlight LspDiagnosticsDefaultHint guifg=lightyellow
@@ -163,7 +162,7 @@ let g:Vsd={'extra_highlight':1}
 " Show list of wildcard matches.
 :set wildmode=list:longest
 
-" Map file types I use often to the appropriate suffixes.
+" Map file types I commonly use to the appropriate suffixes.
 augroup filetype
 	" au! BufRead,BufNewFile *.py let g:jedi#auto_initialization = 1
 	au! BufRead,BufNewFile *.pc set filetype=esqlc
@@ -182,4 +181,6 @@ augroup END
 :map + mb:.,'a><CR>'b
 :map - mb:.,'a<<CR>'b
 
+" Set auto-indent, line numbers, 4 char tab, no error bell, no wrap scan,
+" error file, uncomment expandtab if you rather like spaces than tabs
 :se ai nu ts=4 sw=4 noeb nows errorfile=c.err "expandtab
