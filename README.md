@@ -1,4 +1,5 @@
 # vim-config
+
 My VIM setup
 
 # Requirements
@@ -7,7 +8,12 @@ My VIM setup
 
 # Installation
 
-    git clone <this-repo>
+    git clone https://github.com/sinisa-susnjar/vim-config.git
+
+    cd vim-config
+
+    git submodule update --init --recursive # for Vundle
+
     ln -s vim-config/vimrc ~/.vimrc
     ln -s vim-config/vim ~/.vim
     ln -s vim-config/nvim ~/.config/nvim
