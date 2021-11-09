@@ -158,6 +158,7 @@ let g:Vsd={'extra_highlight':1}
 " Nicer LSP error/warning markers
 :highlight LspDiagnosticsDefaultError guifg=red
 :highlight LspDiagnosticsDefaultWarning guifg=orange
+:highlight LspDiagnosticsDefaultHint guifg=lightyellow
 
 " Show list of wildcard matches.
 :set wildmode=list:longest
