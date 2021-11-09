@@ -6,9 +6,9 @@ My VIM setup
 
 * neovim >= 0.5.0
 
-    sudo add-apt-repository ppa:neovim-ppa/stable
-    sudo apt-get update
-    sudo apt-get install neovim
+    sudo add-apt-repository ppa:neovim-ppa/unstable
+    sudo apt update
+    sudo apt install neovim
 
 * NerdFont of your choice from https://www.nerdfonts.com/
 
@@ -47,3 +47,15 @@ My VIM setup
 
     :PluginInstall
     :UpdateRemotePlugins
+
+# Install LSP servers
+
+This setup uses clangd for C++ and serve-d/dcd for D.
+
+    sudo apt install clangd-12
+	sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
+	sudo update-alternatives --install /usr/bin/clang clang /usr/bin/clang-12 100
+	sudo update-alternatives --install /usr/bin/clang++ clang++ /usr/bin/clang++-12 100
+
+    git clone https://github.com/Pure-D/serve-d.git; cd serve-d; dub build -b release
+	git clone https://github.com/dlang-community/DCD.git; cd DCD; dub build -b release -c client; dub build -b release -c server
