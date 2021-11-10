@@ -47,9 +47,11 @@ filetype plugin indent on    " required
 " Default <leader> key is \ and can be easily remapped to eg Space like this:
 " :let mapleader = "\<Space>"
 map <leader>gb :Git blame<CR>
+map <leader>gc :Git commit<CR>
 map <leader>gd :Gdiff<CR>
+map <leader>gl :Gclog<CR>
+map <leader>gp :Git push<CR>
 map <leader>gs :Git<CR>
-map <leader>gl :Glog<CR>
 noremap <F2> :Gvdiffsplit <CR>
 
 " ------------------------------------------------------------------------------
