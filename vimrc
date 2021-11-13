@@ -33,6 +33,8 @@ Plugin 'neovim/nvim-lspconfig'
 " Add deoplete auto completion plugin(s)
 Plugin 'shougo/deoplete.nvim'
 Plugin 'deoplete-plugins/deoplete-lsp'
+" Get EditorConfig plugin.
+Plugin 'editorconfig/editorconfig-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -107,11 +109,17 @@ let g:deoplete#lsp#use_icons_for_candidates = v:true
 
 " ------------------------------------------------------------------------------
 " Configure C/C++ LSP server.
+" For cmake based projects, run "cmake .. -D CMAKE_EXPORT_COMPILE_COMMANDS=TRUE"
+" and copy the resulting compile_commands.json to the project root.
 lua require'lspconfig'.clangd.setup{}
 
 " ------------------------------------------------------------------------------
 " Configure D LSP server.
 lua require'lspconfig'.serve_d.setup{}
+
+" ------------------------------------------------------------------------------
+" Let EditorConfig and Fugitive play nice together.
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
 " Use all available colours.
 :set termguicolors

@@ -15,3 +15,4 @@ vista.vim
 nvim-lspconfig
 deoplete-lsp
 deoplete.nvim
+editorconfig-vim
