@@ -195,5 +195,5 @@ augroup END
 " error file, uncomment expandtab if you rather like spaces than tabs.
 :se ai nu ts=4 sw=4 noeb nows errorfile=c.err "expandtab
 
-" Enable mouse in (n)ormal, (v)isual and (i)nsert mode.
-:se mouse=nvi
+" Enable mouse in (n)ormal and (v)isual mode.
+:se mouse=nv
