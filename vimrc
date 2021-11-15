@@ -192,5 +192,8 @@ augroup END
 :map - mb:.,'a<<CR>'b
 
 " Set auto-indent, line numbers, 4 char tab, no error bell, no wrap scan,
-" error file, uncomment expandtab if you rather like spaces than tabs
+" error file, uncomment expandtab if you rather like spaces than tabs.
 :se ai nu ts=4 sw=4 noeb nows errorfile=c.err "expandtab
+
+" Enable mouse in (n)ormal, (v)isual and (i)nsert mode.
+:se mouse=nvi
