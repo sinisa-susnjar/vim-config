@@ -119,6 +119,10 @@ lua require'lspconfig'.clangd.setup{}
 lua require'lspconfig'.serve_d.setup{}
 
 " ------------------------------------------------------------------------------
+" Configure R LSP server.
+lua require'lspconfig'.r_language_server.setup{}
+
+" ------------------------------------------------------------------------------
 " Let EditorConfig and Fugitive play nice together.
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
