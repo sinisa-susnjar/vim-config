@@ -1,6 +1,6 @@
 # vim-config
 
-My VIM setup
+This is my private VIM setup that I use to develop C++, D and some R and Python on Ubuntu 20.04 LTS.
 
 # Requirements
 
@@ -12,9 +12,11 @@ My VIM setup
 
 * NerdFont of your choice from https://www.nerdfonts.com/
 
+    Some examples:
+
     cd ~/.fonts
 
-    `wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip; unzip Agave.zip; rm -f Agave.zip`
+    wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip; unzip Agave.zip; rm -f Agave.zip
 
     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip; unzip CascadiaCode.zip; rm -f CascadiaCode.zip
 
