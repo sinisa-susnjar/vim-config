@@ -15,12 +15,19 @@ My VIM setup
     cd ~/.fonts
 
     `wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Agave.zip; unzip Agave.zip; rm -f Agave.zip`
+
     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/CascadiaCode.zip; unzip CascadiaCode.zip; rm -f CascadiaCode.zip
+
     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DaddyTimeMono.zip; unzip DaddyTimeMono.zip; rm -f DaddyTimeMono.zip
+
     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/JetBrainsMono.zip; unzip JetBrainsMono.zip; rm -f JetBrainsMono.zip
+
     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Hack.zip; unzip Hack.zip; rm -f Hack.zip
+
     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/SpaceMono.zip; unzip SpaceMono.zip; rm -f SpaceMono.zip
+
     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/BitstreamVeraSansMono.zip; unzip BitstreamVeraSansMono.zip; rm -f BitstreamVeraSansMono.zip
+
     wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/Monoid.zip; unzip Monoid.zip; rm -f Monoid.zip
 
     fc-cache -f
