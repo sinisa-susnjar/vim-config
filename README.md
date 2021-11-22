@@ -2,9 +2,26 @@
 
 This is my private VIM setup that I use to develop C++, D and some R and Python on Ubuntu 20.04 LTS.
 
+## Example keyboard shortcuts
+
+* <F1> Toggles NerdTree on the left (i.e. file explorer).
+* <F2> Gvdiffsplit (i.e. `git diff` inside vim).
+* <F12> Toggles Vista on the right (i.e. LSP symbol browser).
+* K Show the man page for the word under the cursor (via cppman - only for C++).
+* \gb GIT blame
+* \gc GIT commit
+* \gd GIT diff
+* \gl GIT log
+* \gp GIT push
+* \gs GIT status
+
+## Colour scheme
+
+I use _vsdark_, based on the Visual Studio dark colour scheme.
+
 # Requirements
 
-* neovim >= 0.5.0
+* neovim >= 0.5.0 (I use 0.6.0)
 
     sudo add-apt-repository ppa:neovim-ppa/unstable
     sudo apt update
