@@ -123,6 +123,10 @@ lua require'lspconfig'.serve_d.setup{}
 lua require'lspconfig'.r_language_server.setup{}
 
 " ------------------------------------------------------------------------------
+" Configure Python LSP server.
+lua require'lspconfig'.pylsp.setup{}
+
+" ------------------------------------------------------------------------------
 " Let EditorConfig and Fugitive play nice together.
 let g:EditorConfig_exclude_patterns = ['fugitive://.*']
 
