@@ -16,3 +16,4 @@ nvim-lspconfig
 deoplete-lsp
 deoplete.nvim
 editorconfig-vim
+vim-smoothie

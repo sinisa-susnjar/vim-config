@@ -35,6 +35,8 @@ Plugin 'shougo/deoplete.nvim'
 Plugin 'deoplete-plugins/deoplete-lsp'
 " Get EditorConfig plugin.
 Plugin 'editorconfig/editorconfig-vim'
+" Add smooth(ie) scroller
+Plugin 'psliwka/vim-smoothie'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -108,6 +110,8 @@ let g:airline_powerline_fonts = 1
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#lsp#handler_enabled = v:true
 let g:deoplete#lsp#use_icons_for_candidates = v:true
+
+set completeopt=menu,menuone,noinsert,noselect,preview
 
 " ------------------------------------------------------------------------------
 " Configure C/C++ LSP server.
@@ -206,3 +210,6 @@ augroup END
 
 " Enable mouse in (n)ormal and (v)isual mode.
 :se mouse=nv
+
+" Keep 5 lines offset to the cursor when scrolling.
+:se scrolloff=5
