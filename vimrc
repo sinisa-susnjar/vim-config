@@ -47,6 +47,12 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " ------------------------------------------------------------------------------
+" Configure smooth scrolling
+let g:smoothie_speed_constant_factor = 20
+let g:smoothie_speed_linear_factor = 20
+let g:smoothie_speed_exponentiation_factor = 1.0
+
+" ------------------------------------------------------------------------------
 " Configure shortcuts for vim-fugitive plugin.
 " Default <leader> key is \ and can be easily remapped to eg Space like this:
 " :let mapleader = "\<Space>"
@@ -211,5 +217,5 @@ augroup END
 " Enable mouse in (n)ormal and (v)isual mode.
 :se mouse=nv
 
-" Keep 5 lines offset to the cursor when scrolling.
-:se scrolloff=5
+" Keep cursor a few lines off the border when scrolling.
+:se scrolloff=3
