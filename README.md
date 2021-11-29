@@ -24,7 +24,9 @@ I use _vsdark_, based on the Visual Studio dark colour scheme.
 * neovim >= 0.5.0 (I use 0.6.0)
 
     sudo add-apt-repository ppa:neovim-ppa/unstable
+
     sudo apt update
+
     sudo apt install neovim
 
 * NerdFont of your choice from https://www.nerdfonts.com/
