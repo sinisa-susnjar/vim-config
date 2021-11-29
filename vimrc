@@ -37,6 +37,8 @@ Plugin 'deoplete-plugins/deoplete-lsp'
 Plugin 'editorconfig/editorconfig-vim'
 " Add smooth(ie) scroller
 Plugin 'psliwka/vim-smoothie'
+" Add gcov highlighting plugin
+Plugin 'vim-scripts/gcov.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

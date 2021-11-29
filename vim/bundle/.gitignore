@@ -17,3 +17,4 @@ deoplete-lsp
 deoplete.nvim
 editorconfig-vim
 vim-smoothie
+gcov.vim
