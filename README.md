@@ -59,7 +59,7 @@ I use _vsdark_, based on the Visual Studio dark colour scheme.
 
     cd vim-config
 
-    git submodule update --init --recursive # for Vundle
+    git clone https://github.com/VundleVim/Vundle.vim.git vim/bundle/Vundle.vim
 
     cd
 
