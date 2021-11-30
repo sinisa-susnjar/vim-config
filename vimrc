@@ -39,6 +39,8 @@ Plugin 'editorconfig/editorconfig-vim'
 Plugin 'psliwka/vim-smoothie'
 " Add gcov highlighting plugin
 Plugin 'vim-scripts/gcov.vim'
+" Add trailing whitespace highlighting plugin
+Plugin 'csexton/trailertrash.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
