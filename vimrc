@@ -208,6 +208,9 @@ augroup filetype
 	au! BufNewFile,BufRead *.gcov setfiletype gcov
 augroup END
 
+" Only for C++ - match angle brackets for templates
+autocmd FileType cpp setlocal matchpairs+=<:>
+
 " Some handy mappings.
 :map Y :.,'ay<CR>
 :map D :.,'ad<CR>
