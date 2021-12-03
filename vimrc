@@ -81,7 +81,6 @@ function! s:JbzCppMan()
     let str = expand("<cword>")
     let &l:iskeyword = old_isk
     execute 'Cppman ' . str
-    " execute 'Man ' . str
 endfunction
 command! JbzCppMan :call s:JbzCppMan()
 au FileType cpp nnoremap <buffer>K :JbzCppMan<CR>
@@ -97,19 +96,11 @@ map <c-h> :tabp<CR>
 " map <c-n> :tabnew<CR>
 noremap <F1> :NERDTreeToggle <CR>
 
-" let g:NERDTreeSyntaxDisableDefaultExtensions = 1
-" let g:NERDTreeDisableExactMatchHighlight = 1
-" let g:NERDTreeDisablePatternMatchHighlight = 1
-" let g:NERDTreeSyntaxEnabledExtensions = ['c', 'h', 'cc', 'pl', 'p6', 'sh']
-
 " ------------------------------------------------------------------------------
 " Configure airline statusbar.
 set laststatus=2
 set ttimeoutlen=50
 let g:airline#extensions#tabline#enabled = 1
-"let g:airline_theme='luna'
-"let g:airline_theme='badwolf'
-"let g:airline_theme='dark'
 let g:airline_theme='bubblegum'
 "In order to see the powerline fonts, adapt the font of your terminal
 "In Gnome Terminal: “use custom font” in the profile. See eg nerdfonts.com
