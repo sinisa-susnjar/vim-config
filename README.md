@@ -94,3 +94,9 @@ REditorSupport-languageserver for R and cmake-language-server for CMake:
     R -e 'install.packages("languageserver")'
 
 	pip3 install cmake-language-server
+
+# Screenshots
+
+Everybody loves screenshots :)
+
+![C++ with Vista explorer](screenshots/cpp-with-vista-explorer.png)
