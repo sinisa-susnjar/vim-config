@@ -78,8 +78,8 @@ I use _vsdark_, based on the Visual Studio dark colour scheme.
 
 # Install LSP servers
 
-This setup uses clangd for C++, serve-d/dcd for D, python-lsp for Python
-and REditorSupport-languageserver for R:
+This setup uses clangd for C++, serve-d/dcd for D, python-lsp for Python,
+REditorSupport-languageserver for R and cmake-language-server for CMake:
 
     sudo apt install clangd-12
     sudo update-alternatives --install /usr/bin/clangd clangd /usr/bin/clangd-12 100
@@ -92,3 +92,5 @@ and REditorSupport-languageserver for R:
     pip3 install 'python-lsp-server[all]'
 
     R -e 'install.packages("languageserver")'
+
+	pip3 install cmake-language-server
