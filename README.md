@@ -99,4 +99,4 @@ REditorSupport-languageserver for R and cmake-language-server for CMake:
 
 Everybody loves screenshots :)
 
-![C++ with Vista explorer](screenshots/cpp-with-vista-explorer.png)
+![C++ with Vista explorer](https://user-images.githubusercontent.com/24431899/146689235-9b253113-d532-4b3c-8fe8-8192d3500980.png)
