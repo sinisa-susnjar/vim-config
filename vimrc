@@ -41,6 +41,8 @@ Plugin 'psliwka/vim-smoothie'
 Plugin 'vim-scripts/gcov.vim'
 " Add trailing whitespace highlighting plugin
 Plugin 'csexton/trailertrash.vim'
+" Add cypher syntax plugin
+Plugin 'neo4j-contrib/cypher-vim-syntax'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
