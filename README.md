@@ -4,9 +4,9 @@ This is my private VIM setup that I use to develop C++, D and some R and Python 
 
 ## Example keyboard shortcuts
 
-* <F1> Toggles NerdTree on the left (i.e. file explorer).
-* <F2> Gvdiffsplit (i.e. `git diff` inside vim).
-* <F12> Toggles Vista on the right (i.e. LSP symbol browser).
+* `<F1>` Toggles NerdTree on the left (i.e. file explorer).
+* `<F2>` Gvdiffsplit (i.e. `git diff` inside vim).
+* `<F12>` Toggles Vista on the right (i.e. LSP symbol browser).
 * K Show the man page for the word under the cursor (via cppman - only for C++).
 * \gb GIT blame
 * \gc GIT commit
