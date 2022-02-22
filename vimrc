@@ -53,6 +53,10 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 " ------------------------------------------------------------------------------
+" Configure some LSP diagnostics mappings.
+:nnoremap <silent> g? <cmd>lua vim.lsp.diagnostic.show_line_diagnostics()<CR>
+
+" ------------------------------------------------------------------------------
 " Configure smooth scrolling
 let g:smoothie_speed_constant_factor = 20
 let g:smoothie_speed_linear_factor = 20
