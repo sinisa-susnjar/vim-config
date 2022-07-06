@@ -43,6 +43,8 @@ Plugin 'vim-scripts/gcov.vim'
 Plugin 'csexton/trailertrash.vim'
 " Add cypher syntax plugin
 Plugin 'neo4j-contrib/cypher-vim-syntax'
+" Add MQL5 syntax plugin
+Plugin 'juneidysoo/vim-mql5'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
