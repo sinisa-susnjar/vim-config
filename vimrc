@@ -224,8 +224,13 @@ autocmd FileType cpp setlocal matchpairs+=<:>
 " error file, uncomment expandtab if you rather like spaces than tabs.
 :se ai nu ts=4 sw=4 noeb nows errorfile=c.err "expandtab
 
-" Enable mouse in (n)ormal and (v)isual mode.
-:se mouse=nv
+" No mouse.
+:se mouse=
 
 " Keep cursor a few lines off the border when scrolling.
 :se scrolloff=3
+
+" Automatically trim any whitespace before saving a file.
+augroup prewrites
+    au! BufWritePre,FileWritePre *.* :TrailerTrim
+augroup END
